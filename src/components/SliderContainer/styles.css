@@ -1,0 +1,78 @@
+.slider-section {
+  background-color: #222;
+}
+.slider-container {
+  padding: 100px 90px;
+}
+
+.slider-box {
+  display: flex;
+  column-gap: 40px;
+  border-radius: 12px;
+  overflow: hidden;;
+}
+
+.slider-right-box,
+.slider-left-box {
+  width: 100%;
+}
+
+.slider-right-box {
+  background-image: url(../../../public/images/slider/slider1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.slider-left-box {
+  display: flex;
+  align-items: center;
+}
+
+.slider-left-box > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slider-title {
+  margin-bottom: -25px;
+}
+.slider-subtitle {
+  padding: 25px 0 5px 0
+}
+
+.slider-control-bottomcenter > ul > li > button {
+  padding-left: 10px;
+  padding-right: 10px;
+  fill: white!important;
+}
+.slider-control-bottomcenter > ul > li > button > svg {
+  width: 10px;
+  height: 10px;
+}
+
+.slider-control-centerright {
+  margin-right: 20px;
+}
+.slider-control-centerleft {
+  margin-left: 20px;
+}
+
+.slider-control-centerright > button,
+.slider-control-centerleft > button {
+  padding: 0!important;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-control-centerright > button > svg,
+.slider-control-centerleft > button > svg {
+  font-size: 2.5rem;
+  fill: #fff;
+}

@@ -1,0 +1,26 @@
+.designers-container {
+  padding: 100px 120px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.designers-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  gap: 40px;
+}
+
+.designer-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80px;
+}
+
+.designer-icon-box>img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}

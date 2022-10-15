@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+/* =====  Navigation  ===== */
+section,
+footer {
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 40px;
+  background: #fff;
+  font-size: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav>img {
+  height: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-link {
+  display: flex;
+  column-gap: 30px;
+  margin-right: 150px;
+}
+
+.app-link>a {
+  text-decoration: none;
+}
+
+.app-link>a.active {
+  font-weight: 600;
+}
+
+
+/* =====  Home  ===== */
+.hero-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+}
+
+.hero-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  background-image: url(../public/images/home-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-logo-mobile {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  left: -55px;
+}
+
+.hero-logo-left {
+  width: 50%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.hero-logo-right {
+  width: 50%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.hero-logo-mobile>img {
+  position: absolute;
+  width: 68%;
+  margin-right: 4px;
+  z-index: 1;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.login-form-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20%;
+}
+
+.login-form {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  row-gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form.register-page {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form>button {
+  background-color: #996633;
+  color: #fff;
+  font-size: 18px;
+}
+
+.login-form>button:hover {
+  background-color: #c1864b;
+}
+
+.login-form>a {
+  display: flex;
+  margin-top: 20px;
+  color: black;
+  text-decoration: none;
+  transition: all 3s ease-in-out;
+}
+
+.form-link>span {
+  transition: 300ms;
+}
+
+.login-form>a:hover span {
+  margin-right: 10px;
+  transition: all 300ms;
+  color: blue;
+}
+
+.login-form>a:hover svg {
+  fill: blue;
+}
+
+
+/* =====  Register  ===== */
+.register-hero-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+}
+
+.register-hero-left {
+  width: 50%;
+  background-image: url(../public/images/register-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.register-hero-right {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.register-page-logo {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.login-form>a.fill-form-to-request {
+  margin-top: 0;
+}
+
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 40px 120px;
+  background-color: #eee;
+}
+
+.benefits-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+}
+
+.benefits-item {
+  display: flex;
+  column-gap: 20px;
+}
+
+.benefits-item>svg {
+  margin-top: 5px;
+  font-size: 2.5rem;
+}
+
+.faq-section {
+  background-color: #222;
+}
+
+.faq-container {
+  padding: 60px 0;
+  margin: auto;
+  max-width: 700px;
+}
+
+
+
+
+
+
+/* =====  Footer  ===== */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00092b;
+  padding: 60px 120px;
+}
+
+.footer-icon-box {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.footer-icon-box>a>svg {
+  fill: #fff;
+  font-size: 35px;
+}
+
+.footer-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #aaa;
 }
