@@ -1,9 +1,13 @@
-/* =====  Navigation  ===== */
 section,
 footer {
   width: 100%;
 }
 
+img {
+  pointer-events: none;
+}
+
+/* =====  Navigation  ===== */
 nav {
   position: fixed;
   top: 0;
@@ -95,11 +99,16 @@ nav img {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
   width: 60%;
-  background-image: url(../public/images/home-hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.hero-left>article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-logo-right {
@@ -198,11 +207,18 @@ nav img {
 }
 
 .register-hero-left {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   width: 50%;
-  background-image: url(../public/images/register-hero.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.register-hero-left>article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .register-hero-right {
