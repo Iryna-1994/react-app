@@ -5,11 +5,31 @@ import Button from '@material-ui/core/Button';
 import Title from './Title';
 import Line from './Line';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import Description from './Description';
 
 const LoginForm = () => {
 
   return (
     <div className='login-form-box'>
+      <div className='hero-logo-box'>
+        <img src='../images/logo.png' style={{ height: '60px' }} />
+        <div className='hero-logo-title'>
+          <Title
+            textAlign="center"
+            textColor="black"
+            fontSize="30px"
+            fontWeight="400"
+            content="Dress Twin"
+          />
+        </div>
+        <div className='hero-logo-desc'>
+          <Description
+            textColor="#444"
+            textAlign="center"
+            content="Luxury brands shopping community marketplace"
+          />
+        </div>
+      </div>
       <Title
         textAlign="center"
         textColor="black"
