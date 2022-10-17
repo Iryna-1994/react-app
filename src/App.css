@@ -189,6 +189,10 @@ nav img {
   transition: all 3s ease-in-out;
 }
 
+.login-form>a.register-link {
+  margin-top: 0px;
+}
+
 .form-link>span {
   transition: 300ms;
 }
@@ -360,17 +364,15 @@ nav img {
     padding-right: 16px;
   }
 
-  .navbar {
-    background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  .navbar>.app-logo {
+    visibility: hidden;
+  }
+  .navbar.colorChange>.app-logo {
+    visibility: visible;
   }
 
   .app-link {
     display: none;
-  }
-
-  .navbar .app-logo {
-    visibility: visible;
   }
 
   .navbar .app-logo p {
@@ -417,7 +419,7 @@ nav img {
   }
 
   .login-form-box {
-    padding: 120px 16px 80px 16px;
+    padding: 80px 16px 80px 16px;
   }
 
   .designers-container {

@@ -32,7 +32,7 @@ const RegisterForm = () => {
       <form className='login-form register-page'>
         <TextField id="outlined-basic" label="Enter your code" variant="outlined" fullWidth={true} />
         <Button variant="contained" size="large" fullWidth={true}>Register Now</Button>
-        <NavLink to="/login" className='form-link already-registered'>
+        <NavLink to="/" className='form-link already-registered'>
           <span>Already registered? Login</span>
           <NavigateNextIcon />
         </NavLink>

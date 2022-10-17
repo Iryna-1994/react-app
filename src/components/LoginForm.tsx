@@ -46,8 +46,12 @@ const LoginForm = () => {
         <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth={true} />
         <TextField id="outlined-basic" label="Password" variant="outlined" fullWidth={true} />
         <Button variant="contained" size="large" fullWidth={true}>Login</Button>
-        <NavLink to="/forgot-your-password" className="form-link">
+        <NavLink to="/forgot-your-password" className="form-link forgot-password-link">
           <span className='forgot-password'>Forgot your password?</span>
+          <NavigateNextIcon />
+        </NavLink>
+        <NavLink to="/register" className="form-link register-link">
+          <span className='forgot-password'>Register</span>
           <NavigateNextIcon />
         </NavLink>
       </form>
