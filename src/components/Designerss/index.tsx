@@ -44,9 +44,9 @@ const Designers = (props: any) => {
 
         <div className='designers-grid'>
           {
-            items.map((item: any) => {
+            items.map((item: any, itemIndex: number) => {
               return (
-                <Products iconLink={item} />
+                <Products iconLink={item} key={itemIndex} />
               )
             })
           }

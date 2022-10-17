@@ -74,9 +74,9 @@ const SliderContainer = () => {
         cellSpacing={40}
       >
         {
-          items.map((item: any) => {
+          items.map((item: any, itemIndex: number) => {
             return (
-              <Slider imgLink={item.img} title={item.title} subTitle={item.subTitle} desc={item.desc} />
+              <Slider imgLink={item.img} title={item.title} subTitle={item.subTitle} desc={item.desc} key={itemIndex} />
             )
           })
         }

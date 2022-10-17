@@ -40,7 +40,7 @@ const HeroSlider = (props: any) => {
             position = "lastSlide";
           }
           return (
-            <article className={position}>
+            <article className={position} key={personIndex}>
               <img src={image} alt={name} className="person-img" />
             </article>
           );
