@@ -21,18 +21,23 @@ nav {
   z-index: 10;
 }
 
-nav .app-logo {
+nav .app-logo>a {
   display: flex;
   align-items: center;
   column-gap: 16px;
+  text-decoration: none;
 }
 
-nav .app-logo>p {
+nav .app-logo>a>p {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
   letter-spacing: 6px;
   text-transform: uppercase;
+}
+
+nav>.mobile-drawer {
+  display: none;
 }
 
 .navbar {
@@ -58,7 +63,7 @@ nav .app-logo>p {
   text-shadow: unset;
 }
 
-.navbar.colorChange a.active {
+.navbar.colorChange .app-link>a.active {
   border-bottom: 3px solid black;
 }
 
@@ -135,7 +140,7 @@ nav img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 14%;
+  padding: 0 16%;
 }
 
 .login-form {
@@ -240,7 +245,7 @@ nav img {
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-  padding: 40px 120px;
+  padding: 100px 120px 0 120px;
   background-color: #fff;
 }
 
@@ -296,4 +301,161 @@ nav img {
   font-size: 18px;
   text-transform: uppercase;
   color: #aaa;
+}
+
+
+/* =====  Responsive  ===== */
+@media only screen and (max-width: 1400px) {}
+
+@media only screen and (max-width: 1024px) {}
+
+@media only screen and (max-width: 1280px) {
+  nav {
+    width: auto;
+    left: 0;
+    right: 0;
+  }
+
+  nav>.app-link {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  nav {
+    width: auto;
+    left: 0;
+    right: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 50%;
+  }
+
+  .login-form-box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .designers-container {
+    padding: 100px 32px;
+  }
+
+  .designers-grid {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .benefits-container {
+    padding: 80px 32px 0 32px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  nav {
+    width: auto;
+    left: 0;
+    right: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  }
+
+  .app-link {
+    display: none;
+  }
+
+  .navbar .app-logo {
+    visibility: visible;
+  }
+
+  .navbar .app-logo p {
+    display: none;
+  }
+
+  nav>.mobile-drawer {
+    display: block;
+  }
+
+  .mobile-drawer>button {
+    padding: 10px;
+    min-width: unset;
+  }
+
+  .MuiDrawer-root.MuiDrawer-modal {
+    z-index: 9 !important;
+  }
+
+  .MuiPaper-root.MuiDrawer-paper.MuiDrawer-paperAnchorLeft {
+    padding-top: 100px;
+  }
+
+  .mobile-drawer-link {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .hero-container,
+  .register-hero-container {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .hero-container>div,
+  .register-hero-container>div {
+    width: 100%;
+  }
+
+  .hero-left,
+  .register-hero-left {
+    height: 65vh;
+  }
+
+  .login-form-box {
+    padding: 120px 16px 80px 16px;
+  }
+
+  .designers-container {
+    padding: 80px 16px;
+  }
+
+  .designers-grid {
+    grid-template-columns: auto auto auto;
+  }
+
+  .benefits-container {
+    padding: 80px 16px 0 16px;
+  }
+
+  .benefits-box {
+    grid-template-columns: auto;
+    row-gap: 40px;
+  }
+
+  .benefits-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-container {
+    padding: 60px 16px;
+  }
 }

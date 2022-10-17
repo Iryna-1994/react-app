@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile, isTablet, isBrowser } from 'react-device-detect';
 import Carousel from 'nuka-carousel';
 import Slider from './Slider';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -45,6 +46,16 @@ const SliderContainer = () => {
       desc: <div><p>Your membership is always for free. Some of our brands however are very sensitive, when it comes to noiselessly selling their products at reduce prices. We therefore wish to only have active members within the community.</p><p>Please understand, that if you fail to use your membership within 12 months, we will have to deactivate your account.</p></div>
     }
   ]
+
+  let deviceDetect = 1;
+  if (isMobile || isTablet) {
+    deviceDetect = 1;
+  } else if (isBrowser) {
+    deviceDetect = 2;
+  } else {
+    deviceDetect = 3;
+  }
+
   return (
     <section className='slider-section'>
       <Carousel
@@ -58,7 +69,7 @@ const SliderContainer = () => {
             <ArrowForwardIosIcon />
           </button>
         )}
-        slidesToShow={2}
+        slidesToShow={deviceDetect}
         wrapAround={true}
         cellSpacing={40}
       >

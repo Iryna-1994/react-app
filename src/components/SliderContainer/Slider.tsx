@@ -9,10 +9,8 @@ const Slider = (props: any) => {
 
   return (
     <div className='slider-box'>
-      {/* <div className='slider-left-box'>
-        <img src={imgLink} />
-      </div> */}
       <div className='slider-right-box'>
+        <img src={imgLink} />
         <div className='slider-title'>
           <Title
             textAlign="center"
