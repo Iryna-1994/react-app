@@ -50,7 +50,6 @@ const Navigation = () => {
   const toggleDrawer = (anchor: Anchor, open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent,
   ) => {
-    console.log('btn-click');
     if (
       event &&
       event.type === 'keydown' &&
