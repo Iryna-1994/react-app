@@ -1,5 +1,5 @@
 import React from 'react';
-import { isMobile, isTablet, isBrowser } from 'react-device-detect';
+import { isMobile, isTablet, isDesktop } from 'react-device-detect';
 import Carousel from 'nuka-carousel';
 import Slider from './Slider';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -48,12 +48,14 @@ const SliderContainer = () => {
   ]
 
   let deviceDetect = 1;
-  if (isMobile || isTablet) {
+  if (window.innerWidth <= 800) {
     deviceDetect = 1;
-  } else if (isBrowser) {
+  } else if (window.innerWidth <= 1400) {
     deviceDetect = 2;
-  } else {
+  } else if (window.innerWidth <= 5000) {
     deviceDetect = 3;
+  } else {
+    deviceDetect = 3
   }
 
   return (

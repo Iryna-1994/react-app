@@ -6,6 +6,11 @@
   padding: 100px 90px;
 }
 
+.slider-container>.slider-frame {
+  max-width: 1600px;
+  margin: auto;
+}
+
 .slider-box {
   display: flex;
   column-gap: 40px;
@@ -85,11 +90,34 @@
   .slider-container {
     padding: 100px 0px;
   }
+
   .slider-list>.slide {
-    padding: 0 16px!important;
+    padding: 0 16px !important;
   }
+
   .slider-control-centerright>button>svg,
   .slider-control-centerleft>button>svg {
     font-size: 1.5rem;
-  } 
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .slider-control-centerleft {
+    position: absolute;
+    left: 100px;
+  }
+  .slider-control-centerright {
+    position: absolute;
+    right: 100px;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .slider-control-centerleft {
+    position: absolute;
+    left: 400px;
+  }
+  .slider-control-centerright {
+    position: absolute;
+    right: 400px;
+  }
 }

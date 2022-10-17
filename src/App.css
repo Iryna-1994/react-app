@@ -11,11 +11,12 @@ img {
 nav {
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  padding: 10px 40px;
+  padding: 10px 100px 10px 40px;
   background: #fff;
   font-size: 20px;
   z-index: 10;
@@ -79,7 +80,6 @@ nav img {
 .app-link {
   display: flex;
   column-gap: 30px;
-  margin-right: 150px;
 }
 
 .app-link>a {
@@ -257,6 +257,8 @@ nav img {
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 40px;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .benefits-item {
@@ -282,12 +284,17 @@ nav img {
 
 /* =====  Footer  ===== */
 .footer-container {
+  background-color: black;
+  padding: 60px 120px;
+}
+
+.footer-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  padding: 60px 120px;
+  max-width: 1600px;
+  margin: auto;
 }
 
 .footer-icon-box {
@@ -367,6 +374,7 @@ nav img {
   .navbar>.app-logo {
     visibility: hidden;
   }
+
   .navbar.colorChange>.app-logo {
     visibility: visible;
   }
@@ -457,5 +465,17 @@ nav img {
 
   .footer-container {
     padding: 60px 16px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  nav {
+    padding-left: 150px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  nav {
+    padding-left: 200px;
   }
 }
