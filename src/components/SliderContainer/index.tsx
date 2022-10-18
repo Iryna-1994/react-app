@@ -1,5 +1,4 @@
 import React from 'react';
-import { isMobile, isTablet, isDesktop } from 'react-device-detect';
 import Carousel from 'nuka-carousel';
 import Slider from './Slider';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
